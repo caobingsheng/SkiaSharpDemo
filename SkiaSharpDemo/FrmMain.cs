@@ -15,6 +15,8 @@ namespace SkiaSharpDemo
         {
             InitializeComponent();
             skCtrl.PaintSurface += SkCtrl_PaintSurface;
+            skCtrl.Parent = this;
+            //skCtrl.BackColor = Color.FromArgb(0, Color.Red);
         }
 
         private SKPaint DefPaint = new SKPaint
@@ -42,7 +44,7 @@ namespace SkiaSharpDemo
             SKSurface surface = e.Surface;
             SKCanvas canvas = surface.Canvas;
 
-            canvas.Clear();
+            canvas.Clear(SKColors.Transparent);
 
             float maxRadius = 0.75f * Math.Min(info.Width, info.Height) / 2;
             float minRadius = 0.25f * maxRadius;
@@ -61,6 +63,13 @@ namespace SkiaSharpDemo
             //DefPaint.Style = SKPaintStyle.Fill;
             //DefPaint.Color = SKColors.SkyBlue;
             canvas.DrawOval(info.Width / 2, info.Height / 2, xRadius, yRadius, DefPaint);
+            //}
+            //var ii = new SKImageInfo(640, 480,SKColorType.Bgra8888);
+            //using (var sf = SKSurface.Create(ii))
+            //{
+            //    SKCanvas c = sf.Canvas;
+            //    c.Clear(SKColors.White);
+            //    c.DrawSurface(surface, new SKPoint(0, 0));
             //}
         }
 
@@ -85,7 +94,7 @@ namespace SkiaSharpDemo
                 double t = stopwatch.Elapsed.TotalSeconds % cycleTime / cycleTime;
                 CurrentScale = (1 + (float)Math.Sin(2 * Math.PI * t)) / 2;
                 Invoke((Action)(() => skCtrl.Invalidate()));
-                await Task.Delay(TimeSpan.FromSeconds(1.0 / 30));
+                await Task.Delay(TimeSpan.FromSeconds(1.0 / 40));
             }
             stopwatch.Stop();
         }

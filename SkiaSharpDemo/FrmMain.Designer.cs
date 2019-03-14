@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.skCtrl = new SkiaSharp.Views.Desktop.SKControl();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // skCtrl
@@ -42,18 +44,30 @@
             this.skCtrl.TabIndex = 0;
             this.skCtrl.Text = "skControl1";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SkiaSharpDemo.Properties.Resources.Penguins;
+            this.pictureBox1.Location = new System.Drawing.Point(722, 247);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(295, 214);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 774);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.skCtrl);
             this.Name = "FrmMain";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aero Demo";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -61,6 +75,7 @@
         #endregion
 
         private SkiaSharp.Views.Desktop.SKControl skCtrl;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
