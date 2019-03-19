@@ -17,7 +17,7 @@ namespace SkiaSharpDemo
         {
             InitializeComponent();
             skCtrl.PaintSurface += SkCtrl_PaintSurface;
-            skCtrl.Parent = this;
+            //skCtrl.Parent = this;
             //skCtrl.BackColor = Color.FromArgb(0, Color.Red);
             //var bmp = (Bitmap)picBox.Image;
             //bmp.pix
@@ -43,7 +43,6 @@ namespace SkiaSharpDemo
             //var info = e.Info;
             //var sf = e.Surface;
             //var canvas = sf.Canvas;
-            //canvas.Clear();
             //canvas.DrawCircle(info.Width / 2, info.Height / 2, 100, DefPaint);
             //DefPaint.Style = SKPaintStyle.Fill;
             //DefPaint.Color = SKColors.Blue;
@@ -51,7 +50,7 @@ namespace SkiaSharpDemo
             SKImageInfo info = e.Info;
             SKSurface surface = e.Surface;
             SKCanvas canvas = surface.Canvas;
-            //canvas.Clear(SKColors.Black.WithAlpha(150));
+            canvas.Clear();
             //canvas.Clear(SystemColors.ControlText.ToSKColor());
             float maxRadius = 0.75f * Math.Min(info.Width, info.Height) / 2;
             float minRadius = 0.25f * maxRadius;
@@ -109,12 +108,12 @@ namespace SkiaSharpDemo
                     Right = 250,
                     Bottom = 360
                 }, DefPaint);
-                DefPaint.Color = DefPaint.Color.WithAlpha(240);
+                DefPaint.Color = DefPaint.Color.WithAlpha(255);
             }
             //canvas.Clear(SKColors.Transparent);
             //canvas.DrawColor(SKColors.Transparent);
             //DefPaint.Color = DefPaint.Color.WithAlpha(0);
-            //DefPaint.Style = SKPaintStyle.Fill;
+            DefPaint.Style = SKPaintStyle.Stroke;
             //canvas.DrawRect(info.Rect, DefPaint);
             //DefPaint.Color = DefPaint.Color.WithAlpha(240);
         }
@@ -170,8 +169,8 @@ namespace SkiaSharpDemo
                 var cycleTime = 10;
                 double t = stopwatch.Elapsed.TotalSeconds % cycleTime / cycleTime;
                 CurrentScale = (1 + (float)Math.Sin(2 * Math.PI * t)) / 2;
-                //Invoke((Action)(() => skCtrl.Invalidate()));
-                Invoke((Action)(() => Invalidate(true)));
+                Invoke((Action)(() => skCtrl.Invalidate()));
+                //Invoke((Action)(() => Invalidate(true)));
                 //Invalidate(true);
                 //skCtrl.Invalidate();
                 await Task.Delay(TimeSpan.FromSeconds(1.0 / 30));

@@ -37,7 +37,7 @@
             // 
             this.skCtrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
-            this.skCtrl.BackColor = System.Drawing.SystemColors.ControlText;
+            this.skCtrl.BackColor = System.Drawing.Color.Black;
             this.skCtrl.Location = new System.Drawing.Point(0, 0);
             this.skCtrl.Margin = new System.Windows.Forms.Padding(0);
             this.skCtrl.Name = "skCtrl";
@@ -47,11 +47,10 @@
             // 
             // picBox
             // 
-            this.picBox.Dock = System.Windows.Forms.DockStyle.Fill;
             this.picBox.Image = global::SkiaSharpDemo.Properties.Resources.Penguins;
-            this.picBox.Location = new System.Drawing.Point(0, 0);
+            this.picBox.Location = new System.Drawing.Point(299, 200);
             this.picBox.Name = "picBox";
-            this.picBox.Size = new System.Drawing.Size(1212, 774);
+            this.picBox.Size = new System.Drawing.Size(295, 214);
             this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picBox.TabIndex = 1;
             this.picBox.TabStop = false;
