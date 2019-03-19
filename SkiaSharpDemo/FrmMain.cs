@@ -87,33 +87,37 @@ namespace SkiaSharpDemo
 
             // And draw the text
             canvas.DrawText(txt, xText, yText, DefPaint);
-            if (webBitmap != null)
+            using (DefPaint.ImageFilter = SKImageFilter.CreateBlur(5, 5))
             {
-                canvas.DrawBitmap(webBitmap, new SKRect
+                if (webBitmap != null)
                 {
-                    Left = 50,
-                    Top = 50,
-                    Right = 250,
-                    Bottom = 160
-                });
-                //canvas.DrawBitmap(webBitmap, 0, 0);
-            }
-            if (resourceBitmap != null)
-            {
-                DefPaint.Color = DefPaint.Color.WithAlpha(150);
-                canvas.DrawBitmap(resourceBitmap, new SKRect
+                    canvas.DrawBitmap(webBitmap, new SKRect
+                    {
+                        Left = 50,
+                        Top = 50,
+                        Right = 250,
+                        Bottom = 160
+                    }, DefPaint);
+                    //canvas.DrawBitmap(webBitmap, 0, 0);
+                }
+                if (resourceBitmap != null)
                 {
-                    Left = 50,
-                    Top = 180,
-                    Right = 250,
-                    Bottom = 360
-                }, DefPaint);
-                DefPaint.Color = DefPaint.Color.WithAlpha(255);
+                    DefPaint.Color = DefPaint.Color.WithAlpha(100);
+                    canvas.DrawBitmap(resourceBitmap, new SKRect
+                    {
+                        Left = 50,
+                        Top = 180,
+                        Right = 250,
+                        Bottom = 360
+                    }, DefPaint);
+                    DefPaint.Color = DefPaint.Color.WithAlpha(255);
+                }
             }
+            DefPaint.ImageFilter = null;
             //canvas.Clear(SKColors.Transparent);
             //canvas.DrawColor(SKColors.Transparent);
             //DefPaint.Color = DefPaint.Color.WithAlpha(0);
-            DefPaint.Style = SKPaintStyle.Stroke;
+            //DefPaint.Style = SKPaintStyle.Stroke;
             //canvas.DrawRect(info.Rect, DefPaint);
             //DefPaint.Color = DefPaint.Color.WithAlpha(240);
         }
