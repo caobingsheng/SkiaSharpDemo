@@ -29,14 +29,15 @@
         private void InitializeComponent()
         {
             this.skCtrl = new SkiaSharp.Views.Desktop.SKControl();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.picBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
             // skCtrl
             // 
             this.skCtrl.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
+            this.skCtrl.BackColor = System.Drawing.SystemColors.ControlText;
             this.skCtrl.Location = new System.Drawing.Point(0, 0);
             this.skCtrl.Margin = new System.Windows.Forms.Padding(0);
             this.skCtrl.Name = "skCtrl";
@@ -44,30 +45,31 @@
             this.skCtrl.TabIndex = 0;
             this.skCtrl.Text = "skControl1";
             // 
-            // pictureBox1
+            // picBox
             // 
-            this.pictureBox1.Image = global::SkiaSharpDemo.Properties.Resources.Penguins;
-            this.pictureBox1.Location = new System.Drawing.Point(722, 247);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(295, 214);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
+            this.picBox.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picBox.Image = global::SkiaSharpDemo.Properties.Resources.Penguins;
+            this.picBox.Location = new System.Drawing.Point(0, 0);
+            this.picBox.Name = "picBox";
+            this.picBox.Size = new System.Drawing.Size(1212, 774);
+            this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBox.TabIndex = 1;
+            this.picBox.TabStop = false;
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 774);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.skCtrl);
+            this.Controls.Add(this.picBox);
             this.Name = "FrmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aero Demo";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmMain_FormClosed);
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -75,7 +77,7 @@
         #endregion
 
         private SkiaSharp.Views.Desktop.SKControl skCtrl;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picBox;
     }
 }
 
