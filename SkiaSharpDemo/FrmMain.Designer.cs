@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             this.skCtrl = new SkiaSharp.Views.Desktop.SKControl();
+            this.bntShowSkGl = new System.Windows.Forms.Button();
             this.picBox = new System.Windows.Forms.PictureBox();
+            this.btnShowAero = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,6 +47,16 @@
             this.skCtrl.TabIndex = 0;
             this.skCtrl.Text = "skControl1";
             // 
+            // bntShowSkGl
+            // 
+            this.bntShowSkGl.Location = new System.Drawing.Point(757, 149);
+            this.bntShowSkGl.Name = "bntShowSkGl";
+            this.bntShowSkGl.Size = new System.Drawing.Size(169, 73);
+            this.bntShowSkGl.TabIndex = 2;
+            this.bntShowSkGl.Text = "显示SKGL";
+            this.bntShowSkGl.UseVisualStyleBackColor = true;
+            this.bntShowSkGl.Click += new System.EventHandler(this.bntShowSkGl_Click);
+            // 
             // picBox
             // 
             this.picBox.Image = global::SkiaSharpDemo.Properties.Resources.Penguins;
@@ -55,11 +67,23 @@
             this.picBox.TabIndex = 1;
             this.picBox.TabStop = false;
             // 
+            // btnShowAero
+            // 
+            this.btnShowAero.Location = new System.Drawing.Point(757, 252);
+            this.btnShowAero.Name = "btnShowAero";
+            this.btnShowAero.Size = new System.Drawing.Size(169, 74);
+            this.btnShowAero.TabIndex = 3;
+            this.btnShowAero.Text = "显示AeroForm";
+            this.btnShowAero.UseVisualStyleBackColor = true;
+            this.btnShowAero.Click += new System.EventHandler(this.btnShowAero_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 774);
+            this.Controls.Add(this.btnShowAero);
+            this.Controls.Add(this.bntShowSkGl);
             this.Controls.Add(this.skCtrl);
             this.Controls.Add(this.picBox);
             this.Name = "FrmMain";
@@ -77,6 +101,8 @@
 
         private SkiaSharp.Views.Desktop.SKControl skCtrl;
         private System.Windows.Forms.PictureBox picBox;
+        private System.Windows.Forms.Button bntShowSkGl;
+        private System.Windows.Forms.Button btnShowAero;
     }
 }
 

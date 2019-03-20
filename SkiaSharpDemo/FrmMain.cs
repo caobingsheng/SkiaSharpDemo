@@ -8,6 +8,7 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Vanara.PInvoke;
 
 namespace SkiaSharpDemo
 {
@@ -23,8 +24,6 @@ namespace SkiaSharpDemo
             //bmp.pix
             //new SKCanvas(new SKBitmap());
         }
-
-        private SKBitmap bgBmp;
 
         private SKPaint DefPaint = new SKPaint
         {
@@ -194,6 +193,22 @@ namespace SkiaSharpDemo
         private void FrmMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             IsAnimation = false;
+        }
+
+        private void bntShowSkGl_Click(object sender, EventArgs e)
+        {
+            using (var gl = new FrmSkGl())
+            {
+                gl.ShowDialog();
+            }
+        }
+
+        private void btnShowAero_Click(object sender, EventArgs e)
+        {
+            using (var aero = new FrmAero())
+            {
+                aero.ShowDialog();
+            }
         }
     }
 }
