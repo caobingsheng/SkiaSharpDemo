@@ -122,6 +122,12 @@
     <Compile Include="FrmAero.Designer.cs">
       <DependentUpon>FrmAero.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmBlurClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBlurClient.Designer.cs">
+      <DependentUpon>FrmBlurClient.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmAero.resx">
       <DependentUpon>FrmAero.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBlurClient.resx">
+      <DependentUpon>FrmBlurClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>

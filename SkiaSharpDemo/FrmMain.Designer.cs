@@ -32,6 +32,7 @@
             this.bntShowSkGl = new System.Windows.Forms.Button();
             this.picBox = new System.Windows.Forms.PictureBox();
             this.btnShowAero = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,11 +78,22 @@
             this.btnShowAero.UseVisualStyleBackColor = true;
             this.btnShowAero.Click += new System.EventHandler(this.btnShowAero_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(757, 359);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(169, 74);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "显示AeroClient";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1212, 774);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnShowAero);
             this.Controls.Add(this.bntShowSkGl);
             this.Controls.Add(this.skCtrl);
@@ -103,6 +115,7 @@
         private System.Windows.Forms.PictureBox picBox;
         private System.Windows.Forms.Button bntShowSkGl;
         private System.Windows.Forms.Button btnShowAero;
+        private System.Windows.Forms.Button button1;
     }
 }
 

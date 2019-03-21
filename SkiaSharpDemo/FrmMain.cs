@@ -8,7 +8,6 @@ using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Vanara.PInvoke;
 
 namespace SkiaSharpDemo
 {
@@ -206,6 +205,14 @@ namespace SkiaSharpDemo
         private void btnShowAero_Click(object sender, EventArgs e)
         {
             using (var aero = new FrmAero())
+            {
+                aero.ShowDialog();
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            using (var aero = new FrmBlurClient())
             {
                 aero.ShowDialog();
             }
