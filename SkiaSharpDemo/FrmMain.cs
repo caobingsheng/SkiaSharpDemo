@@ -229,9 +229,17 @@ namespace SkiaSharpDemo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using (var frmNoneBorderMove = new FrmNoneBorderMove())
+            using (var frm = new FrmNoneBorderMove())
             {
-                frmNoneBorderMove.ShowDialog();
+                frm.ShowDialog();
+            }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmOpenCv())
+            {
+                frm.ShowDialog();
             }
         }
     }
