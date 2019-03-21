@@ -1,5 +1,6 @@
 ﻿using Cbs.Aero;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using Vanara.PInvoke;
 using static Vanara.PInvoke.DwmApi;
@@ -35,6 +36,19 @@ namespace SkiaSharpDemo
                 Capture = false;//释放鼠标，使能够手动操作  
                 var p = new POINTS();
                 SendMessage(Handle, WindowMessage.WM_NCLBUTTONDOWN, HitTestValues.HTCAPTION, ref p);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void FrmNoneBorderMove_Paint(object sender, PaintEventArgs e)
+        {
+            using (var g = e.Graphics)
+            {
+                g.DrawRectangle(Pens.White, 0, 0, Width - 1, Height - 1);
             }
         }
     }

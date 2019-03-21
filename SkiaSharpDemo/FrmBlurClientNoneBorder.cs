@@ -35,5 +35,10 @@ namespace SkiaSharpDemo
                 g.DrawRectangle(Pens.White, 0, 0, Width - 1, Height - 1);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

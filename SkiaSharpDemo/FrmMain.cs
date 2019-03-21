@@ -36,6 +36,9 @@ namespace SkiaSharpDemo
         private float CurrentScale;
         private SKBitmap webBitmap;
         private SKBitmap resourceBitmap;
+
+        public FrmNoneBorderMove FrmNoneBorderMove { get; private set; }
+
         private void SkCtrl_PaintSurface(object sender, SkiaSharp.Views.Desktop.SKPaintSurfaceEventArgs e)
         {
             //var info = e.Info;
@@ -228,10 +231,8 @@ namespace SkiaSharpDemo
 
         private void button3_Click(object sender, EventArgs e)
         {
-            using (var aero = new FrmNoneBorderMove())
-            {
-                aero.ShowDialog();
-            }
+            FrmNoneBorderMove = new FrmNoneBorderMove();
+            FrmNoneBorderMove.Show();
         }
     }
 }
