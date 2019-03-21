@@ -1,7 +1,7 @@
 ﻿using Cbs.Aero;
 using OpenCvSharp;
 using OpenCvSharp.Extensions;
-using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Vanara.PInvoke;
 using static Vanara.PInvoke.DwmApi;
@@ -41,32 +41,34 @@ namespace SkiaSharpDemo
             Close();
         }
 
-        private void button2_Click(object sender, System.EventArgs e)
+        private async void button2_Click(object sender, System.EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 var fileFullName = openFileDialog1.FileName;
                 VideoCapture capture = new VideoCapture(fileFullName);
+                await PlayAsync(capture);
+            }
+        }
 
-                int sleepTime = (int)Math.Round(1000 / capture.Fps);
-
-                //using (Window window = new Window("capture"))
-                using (Mat image = new Mat()) // Frame image buffer
+        private async Task PlayAsync(VideoCapture capture)
+        {
+            //using (Window window = new Window("capture"))
+            using (Mat image = new Mat()) // Frame image buffer
+            {
+                // When the movie playback reaches end, Mat.data becomes NULL.
+                while (true)
                 {
-                    // When the movie playback reaches end, Mat.data becomes NULL.
-                    while (true)
+                    capture.Read(image); // same as cvQueryFrame
+                    if (image.Empty())
                     {
-                        capture.Read(image); // same as cvQueryFrame
-                        if (image.Empty())
-                        {
-                            break;
-                        }
-                        var bmp = BitmapConverter.ToBitmap(image);
-                        BackgroundImage?.Dispose();
-                        BackgroundImage = bmp;
-                        //window.ShowImage(image);
-                        Cv2.WaitKey(sleepTime);
+                        break;
                     }
+                    var bmp = image.ToBitmap();
+                    BackgroundImage?.Dispose();
+                    BackgroundImage = bmp;
+                    //window.ShowImage(image);
+                    await Task.Delay(16);
                 }
             }
         }
