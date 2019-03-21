@@ -14,6 +14,7 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -24,6 +25,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,6 +35,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="OpenTK, Version=3.0.1.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
@@ -108,8 +111,17 @@
     <Reference Include="Vanara.PInvoke.Gdi32, Version=2.3.4.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
       <HintPath>..\packages\Vanara.PInvoke.Gdi32.2.3.4\lib\net45\Vanara.PInvoke.Gdi32.dll</HintPath>
     </Reference>
+    <Reference Include="Vanara.PInvoke.Kernel32, Version=2.3.4.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vanara.PInvoke.Kernel32.2.3.4\lib\net45\Vanara.PInvoke.Kernel32.dll</HintPath>
+    </Reference>
     <Reference Include="Vanara.PInvoke.Shared, Version=2.3.4.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
       <HintPath>..\packages\Vanara.PInvoke.Shared.2.3.4\lib\net45\Vanara.PInvoke.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.User32, Version=2.3.4.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vanara.PInvoke.User32.2.3.4\lib\net45\Vanara.PInvoke.User32.dll</HintPath>
+    </Reference>
+    <Reference Include="Vanara.PInvoke.User32.Gdi, Version=2.3.4.0, Culture=neutral, PublicKeyToken=c37e4080322237fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\Vanara.PInvoke.User32.Gdi.2.3.4\lib\net45\Vanara.PInvoke.User32.Gdi.dll</HintPath>
     </Reference>
     <Reference Include="WindowsFormsAero, Version=3.1.1.0, Culture=neutral, PublicKeyToken=1e7518d9b51ece33, processorArchitecture=MSIL">
       <HintPath>..\packages\Windows-Forms-Aero.3.1.1\lib\net461\WindowsFormsAero.dll</HintPath>
@@ -140,6 +152,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmNoneBorderMove.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNoneBorderMove.Designer.cs">
+      <DependentUpon>FrmNoneBorderMove.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSkGl.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +177,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNoneBorderMove.resx">
+      <DependentUpon>FrmNoneBorderMove.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSkGl.resx">
       <DependentUpon>FrmSkGl.cs</DependentUpon>
