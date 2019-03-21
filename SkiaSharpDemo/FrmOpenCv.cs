@@ -46,8 +46,10 @@ namespace SkiaSharpDemo
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 var fileFullName = openFileDialog1.FileName;
-                VideoCapture capture = new VideoCapture(fileFullName);
-                await PlayAsync(capture);
+                using (VideoCapture capture = new VideoCapture(fileFullName))
+                {
+                    await PlayAsync(capture);
+                }
             }
         }
 
@@ -68,9 +70,14 @@ namespace SkiaSharpDemo
                     BackgroundImage?.Dispose();
                     BackgroundImage = bmp;
                     //window.ShowImage(image);
-                    await Task.Delay(16);
+                    await Task.Delay(30);
                 }
             }
+        }
+
+        ~FrmOpenCv()
+        {
+            BackgroundImage?.Dispose();
         }
     }
 }
