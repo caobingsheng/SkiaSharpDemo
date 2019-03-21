@@ -1,6 +1,6 @@
 ﻿namespace SkiaSharpDemo
 {
-    partial class FrmBlurClient
+    partial class FrmBlurClientNoneBorder
     {
         /// <summary>
         /// Required designer variable.
@@ -30,15 +30,18 @@
         {
             this.SuspendLayout();
             // 
-            // FrmBlurClient
+            // FrmBlurClientNoneBorder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FrmBlurClient";
-            this.Text = "FrmBlurClient";
-            this.Load += new System.EventHandler(this.FrmBlurClient_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FrmBlurClientNoneBorder";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "FrmBlurClientNoneBorder";
+            this.Load += new System.EventHandler(this.FrmBlurClientNoneBorder_Load);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.FrmBlurClientNoneBorder_Paint);
             this.ResumeLayout(false);
 
         }

@@ -217,5 +217,13 @@ namespace SkiaSharpDemo
                 aero.ShowDialog();
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            using (var aero = new FrmBlurClientNoneBorder())
+            {
+                aero.ShowDialog();
+            }
+        }
     }
 }

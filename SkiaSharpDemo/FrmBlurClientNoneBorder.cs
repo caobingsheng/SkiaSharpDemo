@@ -1,18 +1,19 @@
 ﻿using Cbs.Aero;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 using static Vanara.PInvoke.DwmApi;
 
 namespace SkiaSharpDemo
 {
-    public partial class FrmBlurClient : Form
+    public partial class FrmBlurClientNoneBorder : Form
     {
-        public FrmBlurClient()
+        public FrmBlurClientNoneBorder()
         {
             InitializeComponent();
         }
 
-        private void FrmBlurClient_Load(object sender, EventArgs e)
+        private void FrmBlurClientNoneBorder_Load(object sender, EventArgs e)
         {
             if (AeroHelper.DwmIsCompositionEnabled())
             {
@@ -24,6 +25,14 @@ namespace SkiaSharpDemo
                     TransitionOnMaximized = true,
                 };
                 DwmEnableBlurBehindWindow(Handle, hind);
+            }
+        }
+
+        private void FrmBlurClientNoneBorder_Paint(object sender, PaintEventArgs e)
+        {
+            using (var g = e.Graphics)
+            {
+                g.DrawRectangle(Pens.White, 0, 0, Width - 1, Height - 1);
             }
         }
     }
