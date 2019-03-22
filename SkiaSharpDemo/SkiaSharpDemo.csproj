@@ -39,6 +39,9 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CSkin">
+      <HintPath>..\..\CSkin 16.1.14.3\CSkin 4.0\CSkin.dll</HintPath>
+    </Reference>
     <Reference Include="OpenCvSharp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6adad1e807fea099, processorArchitecture=MSIL">
       <HintPath>..\packages\OpenCvSharp4.4.0.0.20190108\lib\net461\OpenCvSharp.dll</HintPath>
     </Reference>
@@ -159,6 +162,12 @@
     <Compile Include="FrmBlurClientNoneBorder.Designer.cs">
       <DependentUpon>FrmBlurClientNoneBorder.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCSkin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCSkin.Designer.cs">
+      <DependentUpon>FrmCSkin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmBlurClientNoneBorder.resx">
       <DependentUpon>FrmBlurClientNoneBorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCSkin.resx">
+      <DependentUpon>FrmCSkin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
