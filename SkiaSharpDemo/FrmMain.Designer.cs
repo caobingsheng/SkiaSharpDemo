@@ -37,6 +37,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.skCtrl.Location = new System.Drawing.Point(0, 0);
             this.skCtrl.Margin = new System.Windows.Forms.Padding(0);
             this.skCtrl.Name = "skCtrl";
-            this.skCtrl.Size = new System.Drawing.Size(486, 774);
+            this.skCtrl.Size = new System.Drawing.Size(485, 774);
             this.skCtrl.TabIndex = 0;
             this.skCtrl.Text = "skControl1";
             // 
@@ -56,6 +57,7 @@
             // 
             this.bntShowSkGl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bntShowSkGl.Location = new System.Drawing.Point(997, 12);
+            this.bntShowSkGl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bntShowSkGl.Name = "bntShowSkGl";
             this.bntShowSkGl.Size = new System.Drawing.Size(203, 74);
             this.bntShowSkGl.TabIndex = 2;
@@ -66,7 +68,8 @@
             // btnShowAero
             // 
             this.btnShowAero.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnShowAero.Location = new System.Drawing.Point(997, 119);
+            this.btnShowAero.Location = new System.Drawing.Point(997, 91);
+            this.btnShowAero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnShowAero.Name = "btnShowAero";
             this.btnShowAero.Size = new System.Drawing.Size(203, 74);
             this.btnShowAero.TabIndex = 3;
@@ -77,7 +80,8 @@
             // button1
             // 
             this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.Location = new System.Drawing.Point(997, 226);
+            this.button1.Location = new System.Drawing.Point(997, 170);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(203, 74);
             this.button1.TabIndex = 4;
@@ -88,7 +92,8 @@
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(997, 333);
+            this.button2.Location = new System.Drawing.Point(997, 249);
+            this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(203, 74);
             this.button2.TabIndex = 5;
@@ -100,6 +105,7 @@
             // 
             this.picBox.Image = global::SkiaSharpDemo.Properties.Resources.Penguins;
             this.picBox.Location = new System.Drawing.Point(299, 200);
+            this.picBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.picBox.Name = "picBox";
             this.picBox.Size = new System.Drawing.Size(295, 214);
             this.picBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -109,7 +115,8 @@
             // button3
             // 
             this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(997, 445);
+            this.button3.Location = new System.Drawing.Point(997, 328);
+            this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(203, 74);
             this.button3.TabIndex = 6;
@@ -120,7 +127,8 @@
             // button4
             // 
             this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(997, 552);
+            this.button4.Location = new System.Drawing.Point(997, 406);
+            this.button4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(203, 74);
             this.button4.TabIndex = 7;
@@ -131,19 +139,32 @@
             // button5
             // 
             this.button5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button5.Location = new System.Drawing.Point(997, 647);
+            this.button5.Location = new System.Drawing.Point(997, 485);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(203, 74);
             this.button5.TabIndex = 8;
-            this.button5.Text = "CSkin";
+            this.button5.Text = "Vanara";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button6.Location = new System.Drawing.Point(997, 564);
+            this.button6.Margin = new System.Windows.Forms.Padding(2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(203, 80);
+            this.button6.TabIndex = 8;
+            this.button6.Text = "CSkin";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1212, 774);
+            this.ClientSize = new System.Drawing.Size(1616, 968);
+            this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
@@ -153,6 +174,7 @@
             this.Controls.Add(this.bntShowSkGl);
             this.Controls.Add(this.skCtrl);
             this.Controls.Add(this.picBox);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "FrmMain";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -175,6 +197,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
     }
 }
 

@@ -1,13 +1,13 @@
-﻿using Cbs.Aero;
-using SkiaSharp;
-using SkiaSharp.Views.Desktop;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Cbs.Aero;
+using SkiaSharp;
+using SkiaSharp.Views.Desktop;
 
 namespace SkiaSharpDemo
 {
@@ -244,6 +244,14 @@ namespace SkiaSharpDemo
         }
 
         private void button5_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmVanara())
+            {
+                frm.ShowDialog();
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
         {
             using (var frm = new FrmCSkin())
             {

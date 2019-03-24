@@ -1,6 +1,6 @@
 ﻿namespace SkiaSharpDemo
 {
-    partial class FrmCSkin
+    partial class FrmVanara
     {
         /// <summary>
         /// Required designer variable.
@@ -30,16 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FrmCSkin
+            // FrmVanara
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Name = "FrmCSkin";
-            this.RoundStyle = CCWin.SkinClass.RoundStyle.None;
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "FrmCSkin";
+            this.Name = "FrmVanara";
+            this.Text = "FrmVanara";
             this.ResumeLayout(false);
 
         }
