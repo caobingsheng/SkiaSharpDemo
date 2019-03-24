@@ -210,6 +210,12 @@
     <Compile Include="FrmCSkin.Designer.cs">
       <DependentUpon>FrmCSkin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmLayeredWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLayeredWindow.Designer.cs">
+      <DependentUpon>FrmLayeredWindow.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMain.cs">
       <SubType>Form</SubType>
     </Compile>

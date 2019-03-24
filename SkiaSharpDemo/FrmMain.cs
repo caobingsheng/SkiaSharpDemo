@@ -258,5 +258,13 @@ namespace SkiaSharpDemo
                 frm.ShowDialog();
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmLayeredWindow())
+            {
+                frm.ShowDialog();
+            }
+        }
     }
 }
